@@ -1,0 +1,46 @@
+
+@keyframes shrink {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes erase {
+  0% {
+    font-size: 0px;
+  }
+  50% {
+    font-size: x-large;
+  }
+  100% {
+    font-size: 0px;
+  }
+}
+
+body {
+  width : 100vw;
+  height: 100vh;
+}
+.circle {
+  display: block;
+  position: fixed;
+	background-color : red;
+  border-radius: 50%;
+  animation: shrink 0.3s ease-in;
+	}
+.popContainer {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: erase 0.3s ease-in;
+}
